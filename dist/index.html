@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/styles.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/2957dab572.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Password generator</title>
+  </head>
+  <body>
+    <main id="main">
+      <h1>Ferramenta de geração de senha</h1>
+      <h2>Gere uma senha segura</h2>
+      <p>
+        Use o seu gerador de senha online para criar imediatamente uma senha
+        segura e aleartória.
+      </p>
+
+      <div class="password-field">
+        <input type="text" />
+        <div class="icons">
+          <i class="far fa-copy" id="copy-password"></i>
+          <i class="fas fa-sync" id="regeneratePassword"></i>
+        </div>
+      </div>
+
+      <div class="setting-password">
+        <header>
+          <h3>Personalize sua senha</h3>
+        </header>
+        <form>
+          <div class="form-group">
+            <label for="">Número de caracteres da senha</label>
+            <div class="input-group">
+              <input
+                type="range"
+                id="range"
+                value="12"
+                min="1"
+                max="50"
+                oninput="this.nextElementSibling.value = this.value"
+              />
+              <input
+                type="number"
+                min="1"
+                max="50"
+                value="12"
+                id="passwordLength"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="container-2"
+              >Letra maiúscula
+              <input type="checkbox" checked="checked" id="uppercase-letters" />
+              <span class="checkmark-2"></span>
+            </label>
+            <label class="container-2"
+              >Letra minúscula
+              <input type="checkbox" checked="checked" id="lowercase-letters" />
+              <span class="checkmark-2"></span>
+            </label>
+            <label class="container-2"
+              >Números
+              <input type="checkbox" checked="checked" id="numbers" />
+              <span class="checkmark-2"></span>
+            </label>
+            <label class="container-2"
+              >Símbolos
+              <input type="checkbox" checked="checked" id="symbols" />
+              <span class="checkmark-2"></span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

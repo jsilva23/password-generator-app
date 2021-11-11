@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f9fbfd;
+  color: #0a2240;
+  font-family: 'Roboto', sans-serif;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 3.6rem 2rem;
+}
+
+#main h1 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #af0809;
+  margin-bottom: 25px;
+}
+
+#main h2 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+#main p {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.password-field {
+  background-color: #fff;
+  width: 100%;
+  max-width: 740px;
+  height: 100px;
+  display: flex;
+  margin: 15px 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.password-field input {
+  flex: 1;
+  width: 10px;
+  font-size: 2.6rem;
+  margin-left: 2.5rem;
+  border: none;
+  outline: none;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+}
+
+.icons i {
+  margin-right: 15px;
+  font-size: 2.6rem;
+  cursor: pointer;
+}
+
+.setting-password {
+  background-color: #fff;
+  width: 100%;
+  max-width: 740px;
+  padding: 2rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.setting-password header {
+  border-bottom: 2px solid #edeef0;
+  padding: 8px 0;
+  margin-bottom: 1.5rem;
+  font-size: 2.4rem;
+  color: #0a2240;
+}
+
+.setting-password form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  justify-content: space-between;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+
+  margin: 16px 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-size: 2rem;
+}
+
+input[type='number'] {
+  border: 1px solid #0a224033;
+  padding: 10px 5px;
+  border-radius: 8px;
+  outline: none;
+  margin-right: 10px;
+  width: 50px;
+}
+
+input[type='range'] {
+  flex: 1;
+  border-radius: 8px;
+  height: 7px;
+  outline: none;
+  appearance: none;
+  border: 1px solid #0a224033;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-border-radius: 5px;
+  /*16x16px adjusted to be same as 14x14px on moz*/
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: #0a2240;
+  border: 1px solid #0a2240;
+}
+
+/* The container-2 */
+.container-2 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-2 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark-2 {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container-2:hover input ~ .checkmark-2 {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-2 input:checked ~ .checkmark-2 {
+  background-color: #af0809;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark-2:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-2 input:checked ~ .checkmark-2:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-2 .checkmark-2:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #0a2240;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media (max-width: 852px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 385px) {
+  html {
+    font-size: 45%;
+  }
+}
+
